@@ -1,8 +1,9 @@
 from telegram import Update, KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 import random
+import os
 
-TOKEN = "8254047749:AAFC8cD-0q_aBZRSWGaQ0Ce-qwD6VTHoVyY"
+TOKEN = os.getenv("BOT_TOKEN")
 
 # رسالة البداية
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
