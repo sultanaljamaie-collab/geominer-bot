@@ -5,6 +5,9 @@ import os
 
 TOKEN = os.getenv("BOT_TOKEN")
 
+if not TOKEN:
+    raise ValueError("BOT_TOKEN غير موجود في متغيرات البيئة")
+
 # رسالة البداية
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
